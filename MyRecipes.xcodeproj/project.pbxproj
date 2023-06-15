@@ -22,6 +22,9 @@
 		8655E23F2A39B7F00093902D /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E23E2A39B7F00093902D /* MyInfoViewController.swift */; };
 		8655E2422A39C1D50093902D /* Soap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2412A39C1D50093902D /* Soap.swift */; };
 		8655E2452A39C3BF0093902D /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 8655E2442A39C3BF0093902D /* SwiftSoup */; };
+		8655E2482A3B120D0093902D /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 8655E2472A3B120D0093902D /* OpenAI */; };
+		8655E24A2A3B12590093902D /* OpenAIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2492A3B12590093902D /* OpenAIManager.swift */; };
+		8655E24C2A3B29540093902D /* OpenAiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E24B2A3B29540093902D /* OpenAiKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,8 @@
 		8655E23C2A39B7E50093902D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8655E23E2A39B7F00093902D /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		8655E2412A39C1D50093902D /* Soap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soap.swift; sourceTree = "<group>"; };
+		8655E2492A3B12590093902D /* OpenAIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIManager.swift; sourceTree = "<group>"; };
+		8655E24B2A3B29540093902D /* OpenAiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8655E2482A3B120D0093902D /* OpenAI in Frameworks */,
 				8655E2452A39C3BF0093902D /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				8655E2412A39C1D50093902D /* Soap.swift */,
+				8655E2492A3B12590093902D /* OpenAIManager.swift */,
+				8655E24B2A3B29540093902D /* OpenAiKey.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 			name = MyRecipes;
 			packageProductDependencies = (
 				8655E2442A39C3BF0093902D /* SwiftSoup */,
+				8655E2472A3B120D0093902D /* OpenAI */,
 			);
 			productName = MyRecipes;
 			productReference = 8655E2012A39AB480093902D /* MyRecipes.app */;
@@ -261,6 +270,7 @@
 			mainGroup = 8655E1F82A39AB480093902D;
 			packageReferences = (
 				8655E2432A39C3BF0093902D /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				8655E2462A3B120D0093902D /* XCRemoteSwiftPackageReference "OpenAI" */,
 			);
 			productRefGroup = 8655E2022A39AB480093902D /* Products */;
 			projectDirPath = "";
@@ -309,6 +319,8 @@
 				8655E2352A39AB730093902D /* Extenstion.swift in Sources */,
 				8655E2092A39AB480093902D /* MainTabController.swift in Sources */,
 				8655E2052A39AB480093902D /* AppDelegate.swift in Sources */,
+				8655E24A2A3B12590093902D /* OpenAIManager.swift in Sources */,
+				8655E24C2A3B29540093902D /* OpenAiKey.swift in Sources */,
 				8655E23F2A39B7F00093902D /* MyInfoViewController.swift in Sources */,
 				8655E23D2A39B7E50093902D /* MainViewController.swift in Sources */,
 				8655E2392A39B0630093902D /* GuideViewController.swift in Sources */,
@@ -664,6 +676,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		8655E2462A3B120D0093902D /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -671,6 +691,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8655E2432A39C3BF0093902D /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		8655E2472A3B120D0093902D /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8655E2462A3B120D0093902D /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

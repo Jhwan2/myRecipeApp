@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OpenAI
 
 final class MainTapController: UITabBarController {
     
@@ -20,10 +21,11 @@ final class MainTapController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userAndConfigureUI()
-//        configureUI()
         configureTabUI()
-        CrollingManager.shared.fetch()
-        
+//        CrollingManager.shared.fetch()
+//        OpenAIManager.shared.fetchOpenAiChat(ques: "나는 누구야?") { result in
+//            print("\(result.choices.first?.message.content)")
+//        }
     }
     
     private func userAndConfigureUI() {
@@ -32,12 +34,6 @@ final class MainTapController: UITabBarController {
                 nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: true)
             }
-    }
-    
-    private func configureUI() {
-        view.backgroundColor = .white
-        view.addSubview(mybutton)
-        mybutton.center(inView: view)
     }
     
     private func configureTabUI() {
