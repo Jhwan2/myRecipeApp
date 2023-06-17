@@ -25,6 +25,9 @@
 		8655E2482A3B120D0093902D /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 8655E2472A3B120D0093902D /* OpenAI */; };
 		8655E24A2A3B12590093902D /* OpenAIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2492A3B12590093902D /* OpenAIManager.swift */; };
 		8655E24C2A3B29540093902D /* OpenAiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E24B2A3B29540093902D /* OpenAiKey.swift */; };
+		8655E24F2A3D84D60093902D /* CustomCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E24E2A3D84D60093902D /* CustomCellView.swift */; };
+		8655E2522A3D87F20093902D /* myModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2512A3D87F20093902D /* myModel.swift */; };
+		8655E2552A3D8AE80093902D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8655E2542A3D8AE80093902D /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,8 @@
 		8655E2412A39C1D50093902D /* Soap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soap.swift; sourceTree = "<group>"; };
 		8655E2492A3B12590093902D /* OpenAIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIManager.swift; sourceTree = "<group>"; };
 		8655E24B2A3B29540093902D /* OpenAiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiKey.swift; sourceTree = "<group>"; };
+		8655E24E2A3D84D60093902D /* CustomCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellView.swift; sourceTree = "<group>"; };
+		8655E2512A3D87F20093902D /* myModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8655E2552A3D8AE80093902D /* SDWebImage in Frameworks */,
 				8655E2482A3B120D0093902D /* OpenAI in Frameworks */,
 				8655E2452A39C3BF0093902D /* SwiftSoup in Frameworks */,
 			);
@@ -117,6 +123,8 @@
 		8655E2032A39AB480093902D /* MyRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				8655E2502A3D87E60093902D /* Model */,
+				8655E24D2A3D84970093902D /* View */,
 				8655E2042A39AB480093902D /* AppDelegate.swift */,
 				8655E2062A39AB480093902D /* SceneDelegate.swift */,
 				8655E2372A39B00E0093902D /* Extenstion */,
@@ -176,6 +184,22 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		8655E24D2A3D84970093902D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8655E24E2A3D84D60093902D /* CustomCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8655E2502A3D87E60093902D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8655E2512A3D87F20093902D /* myModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,6 +219,7 @@
 			packageProductDependencies = (
 				8655E2442A39C3BF0093902D /* SwiftSoup */,
 				8655E2472A3B120D0093902D /* OpenAI */,
+				8655E2542A3D8AE80093902D /* SDWebImage */,
 			);
 			productName = MyRecipes;
 			productReference = 8655E2012A39AB480093902D /* MyRecipes.app */;
@@ -271,6 +296,7 @@
 			packageReferences = (
 				8655E2432A39C3BF0093902D /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				8655E2462A3B120D0093902D /* XCRemoteSwiftPackageReference "OpenAI" */,
+				8655E2532A3D8AE80093902D /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 8655E2022A39AB480093902D /* Products */;
 			projectDirPath = "";
@@ -320,11 +346,13 @@
 				8655E2092A39AB480093902D /* MainTabController.swift in Sources */,
 				8655E2052A39AB480093902D /* AppDelegate.swift in Sources */,
 				8655E24A2A3B12590093902D /* OpenAIManager.swift in Sources */,
+				8655E24F2A3D84D60093902D /* CustomCellView.swift in Sources */,
 				8655E24C2A3B29540093902D /* OpenAiKey.swift in Sources */,
 				8655E23F2A39B7F00093902D /* MyInfoViewController.swift in Sources */,
 				8655E23D2A39B7E50093902D /* MainViewController.swift in Sources */,
 				8655E2392A39B0630093902D /* GuideViewController.swift in Sources */,
 				8655E2072A39AB480093902D /* SceneDelegate.swift in Sources */,
+				8655E2522A3D87F20093902D /* myModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +712,14 @@
 				minimumVersion = 0.2.1;
 			};
 		};
+		8655E2532A3D8AE80093902D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -696,6 +732,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8655E2462A3B120D0093902D /* XCRemoteSwiftPackageReference "OpenAI" */;
 			productName = OpenAI;
+		};
+		8655E2542A3D8AE80093902D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8655E2532A3D8AE80093902D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

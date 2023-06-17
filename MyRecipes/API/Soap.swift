@@ -22,12 +22,19 @@ final class CrollingManager {
             }
             
             let html = String(data: data, encoding: .utf8)!
+            
             do {
                 let document = try SwiftSoup.parse(html)
                 // 이 부분에서 필요한 데이터를 파싱합니다.
                 let titleElement = try document.select("h3").first()
                 let title = try titleElement?.text()
                 print(title as Any)
+                let doc: Document = try SwiftSoup.parse(html)
+                let firstImage: Elements = try doc.select("view2_pic.view_cate_pdt.centeredcrop").select("img")
+    
+                for element in firstImage.array() {
+                    print(try element.attr("src"))
+                }
             } catch Exception.Error(let type, let message) {
                 print("\(type): \(message)")
             } catch {

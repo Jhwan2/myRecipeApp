@@ -22,7 +22,7 @@ final class MainTapController: UITabBarController {
         super.viewDidLoad()
         userAndConfigureUI()
         configureTabUI()
-//        CrollingManager.shared.fetch()
+        CrollingManager.shared.fetch()
 //        OpenAIManager.shared.fetchOpenAiChat(ques: "나는 누구야?") { result in
 //            print("\(result.choices.first?.message.content)")
 //        }

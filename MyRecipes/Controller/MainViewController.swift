@@ -10,11 +10,6 @@ import UIKit
 private let reuseIdentifier = "MyCell23"
 
 final class MainViewController: UICollectionViewController {
-    
-    let arr = [UIImage(systemName: "square.and.arrow.up.circle.fill"),
-                       UIImage(systemName: "square.and.arrow.up.circle.fill"),
-                       UIImage(systemName: "square.and.arrow.up.circle.fill"),
-                       UIImage(systemName: "square.and.arrow.up.circle.fill") ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +25,11 @@ final class MainViewController: UICollectionViewController {
 
 extension MainViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("4개개개")
-        return arr.count
+        return 4
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        print("@@@@@@@@@@@@@@@@@@")
-        let imageview = UIImageView(image: arr[indexPath.row])
-        cell.backgroundView = imageview
+        cell.backgroundView = CustomCellView()
         return cell
     }
     
@@ -49,7 +41,7 @@ extension MainViewController {
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        return CGSize(width: 300, height: 300)
     }
 }
 
