@@ -8,22 +8,28 @@
 import SDWebImage
 import UIKit
 
-class CustomCellView: UIView {
+class CustomCellView: UICollectionViewCell {
     
     private let mainView: UIView = {
        let view = UIView()
         view.frame = .init(x: 0, y: 0, width: 300, height: 300)
-        view.backgroundColor = .white
+        view.backgroundColor = .blue
         return view
     }()
     
-    private let mainImageView: UIImageView = {
+    let mainImageView: UIImageView = {
        let imageview = UIImageView()
 //        imageview.image = UIImage(systemName: "plus")
         imageview.contentMode = .scaleAspectFill
         
 //        imageview.sd_setImage(with: <#T##URL?#>)
         return imageview
+    }()
+    
+    var myTitle: UILabel = {
+       let label = UILabel()
+        label.text = "hiho"
+        return label
     }()
     
     override init(frame: CGRect) {
@@ -39,6 +45,8 @@ class CustomCellView: UIView {
         addSubview(mainView)
         addSubview(mainImageView)
         mainImageView.center(inView: mainView)
+        addSubview(myTitle)
+        myTitle.anchor(bottom: mainView.bottomAnchor, right: mainView.rightAnchor, paddingBottom: 20, paddingRight: 20)
     }
 
 }

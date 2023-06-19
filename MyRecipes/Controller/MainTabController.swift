@@ -10,8 +10,6 @@ import OpenAI
 
 final class MainTapController: UITabBarController {
     
-    var isFirst = false
-    
     var mybutton: UIButton = {
         let btn = UIButton(type: .system)
         btn.setTitle("hihihi", for: .normal)
@@ -22,7 +20,6 @@ final class MainTapController: UITabBarController {
         super.viewDidLoad()
         userAndConfigureUI()
         configureTabUI()
-        CrollingManager.shared.fetch()
 //        OpenAIManager.shared.fetchOpenAiChat(ques: "나는 누구야?") { result in
 //            print("\(result.choices.first?.message.content)")
 //        }

@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-struct myModel {
-    
-    let image: UIImage
-    
+struct Recipe {
+    let imageUrl: URL
+    let title: String
 }
