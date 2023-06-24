@@ -31,13 +31,24 @@ final class CrollingManager {
                     let titleElement: Element = try element.select("div.common_sp_caption_tit.line2").first()!
                     let title: String = try titleElement.text()
                     
-                    let imageURL: String = try element.select("div.common_sp_thumb img").attr("src")
+                    // Get all image elements
+                    let imageElements: Elements = try element.select("div.common_sp_thumb img")
+                    
+                    // Check if there's more than one image, if so get the second one
+                    let imageURL: String
+                    if imageElements.array().count > 1 {
+                        imageURL = try imageElements.array()[1].attr("src")
+                    } else {
+                        imageURL = try imageElements.array()[0].attr("src")
+                    }
                     guard let imageurl = URL(string: imageURL) else {return }
                     
                     if recipes.count < 10 {
                         recipes.append(Recipe(imageUrl: imageurl, title: title))
                     } else {
-                        completion(recipes)
+                        DispatchQueue.main.async {
+                            completion(recipes)
+                        }
                         break
                     }
                 }

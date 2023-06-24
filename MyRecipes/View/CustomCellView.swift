@@ -14,14 +14,15 @@ class CustomCellView: UICollectionViewCell {
        let view = UIView()
         view.frame = .init(x: 0, y: 0, width: 300, height: 300)
         view.backgroundColor = .blue
+        view.layer.cornerRadius = 20
         return view
     }()
     
     let mainImageView: UIImageView = {
        let imageview = UIImageView()
 //        imageview.image = UIImage(systemName: "plus")
-        imageview.contentMode = .scaleAspectFill
-        
+        imageview.contentMode = .scaleAspectFit
+        imageview.layer.cornerRadius = 20
 //        imageview.sd_setImage(with: <#T##URL?#>)
         return imageview
     }()
@@ -29,6 +30,8 @@ class CustomCellView: UICollectionViewCell {
     var myTitle: UILabel = {
        let label = UILabel()
         label.text = "hiho"
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 30, weight: .bold)
         return label
     }()
     
