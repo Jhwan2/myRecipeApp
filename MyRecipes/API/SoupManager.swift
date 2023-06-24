@@ -8,9 +8,9 @@
 import UIKit
 import SwiftSoup
 
-final class CrollingManager {
+final class SoupManager {
     
-    static let shared = CrollingManager()
+    static let shared = SoupManager()
 
     let rankUrl = URL(string: "https://www.10000recipe.com/ranking/home_new.html")!
     

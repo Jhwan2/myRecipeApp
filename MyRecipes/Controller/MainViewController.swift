@@ -23,18 +23,22 @@ final class MainViewController: UICollectionViewController {
         super.viewDidLoad()
         collectionConfigure()
         fetchURL()
+        navigationItem.title = "Recipe Rank 10"
     }
     
     private func collectionConfigure() {
         view.backgroundColor = .white
         self.collectionView.register(CustomCellView.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        self.collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        self.collectionView.collectionViewLayout = layout
     }
     
     func fetchURL() {
-        CrollingManager.shared.fetch { recipe in
+        SoupManager.shared.fetch { recipe in
             self.myRecipes = recipe
             
         }
@@ -65,7 +69,7 @@ extension MainViewController {
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 300)
+        return CGSize(width: 300, height: 370)
     }
 }
 
