@@ -14,13 +14,14 @@ final class OpenAIManager {
     
     let openAI = OpenAI(apiToken: myKey)
 
-    func fetchOpenAiChat(ques: String, completion:@escaping(ChatResult) -> Void) {
+    func fetchOpenAiChat(ques: String, completion:@escaping(String) -> Void) {
         
         let query = ChatQuery(model: .gpt3_5Turbo, messages: [.init(role: .user, content: ques)])
         OpenAIManager.shared.openAI.chats(query: query) { result in
             switch result {
             case .success(let success):
-                completion(success)
+                guard let res = success.choices.first?.message.content else { return }
+                completion(res)
             case .failure(let failure):
                 print("\(failure)")
             }

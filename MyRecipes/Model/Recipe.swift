@@ -11,4 +11,5 @@ import UIKit
 struct Recipe {
     let imageUrl: URL
     let title: String
+    let recipeNum: String
 }

@@ -40,9 +40,10 @@ final class MainViewController: UICollectionViewController {
     func fetchURL() {
         SoupManager.shared.fetch { recipe in
             self.myRecipes = recipe
-            
         }
-//        CrollingManager.shared.parseHTML()
+//        OpenAIManager.shared.fetchOpenAiChat(ques: "냉장고에 김치, 소금, 간장, 밀가루가 있어 이재료로 요리 추천해줘") { res in
+//            print(res)
+//        }
     }
 
 }

@@ -31,6 +31,8 @@ final class SoupManager {
                     let titleElement: Element = try element.select("div.common_sp_caption_tit.line2").first()!
                     let title: String = try titleElement.text()
                     
+                    let resNum: Element = try element.select("div.common_sp_thumb > a").first()!
+                    let recipeNum: String = try resNum.attr("href")
                     // Get all image elements
                     let imageElements: Elements = try element.select("div.common_sp_thumb img")
                     
@@ -44,7 +46,7 @@ final class SoupManager {
                     guard let imageurl = URL(string: imageURL) else {return }
                     
                     if recipes.count < 10 {
-                        recipes.append(Recipe(imageUrl: imageurl, title: title))
+                        recipes.append(Recipe(imageUrl: imageurl, title: title, recipeNum: recipeNum))
                     } else {
                         DispatchQueue.main.async {
                             completion(recipes)

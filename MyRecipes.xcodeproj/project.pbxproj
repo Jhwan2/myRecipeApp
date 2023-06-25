@@ -26,8 +26,9 @@
 		8655E24A2A3B12590093902D /* OpenAIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2492A3B12590093902D /* OpenAIManager.swift */; };
 		8655E24C2A3B29540093902D /* OpenAiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E24B2A3B29540093902D /* OpenAiKey.swift */; };
 		8655E24F2A3D84D60093902D /* CustomCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E24E2A3D84D60093902D /* CustomCellView.swift */; };
-		8655E2522A3D87F20093902D /* myModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2512A3D87F20093902D /* myModel.swift */; };
+		8655E2522A3D87F20093902D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2512A3D87F20093902D /* Recipe.swift */; };
 		8655E2552A3D8AE80093902D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8655E2542A3D8AE80093902D /* SDWebImage */; };
+		8655E2CD2A482FEB0093902D /* MyRefrigerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2CC2A482FEB0093902D /* MyRefrigerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +70,8 @@
 		8655E2492A3B12590093902D /* OpenAIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIManager.swift; sourceTree = "<group>"; };
 		8655E24B2A3B29540093902D /* OpenAiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiKey.swift; sourceTree = "<group>"; };
 		8655E24E2A3D84D60093902D /* CustomCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellView.swift; sourceTree = "<group>"; };
-		8655E2512A3D87F20093902D /* myModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myModel.swift; sourceTree = "<group>"; };
+		8655E2512A3D87F20093902D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		8655E2CC2A482FEB0093902D /* MyRefrigerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRefrigerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +197,8 @@
 		8655E2502A3D87E60093902D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8655E2512A3D87F20093902D /* myModel.swift */,
+				8655E2512A3D87F20093902D /* Recipe.swift */,
+				8655E2CC2A482FEB0093902D /* MyRefrigerator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,12 +350,13 @@
 				8655E2052A39AB480093902D /* AppDelegate.swift in Sources */,
 				8655E24A2A3B12590093902D /* OpenAIManager.swift in Sources */,
 				8655E24F2A3D84D60093902D /* CustomCellView.swift in Sources */,
+				8655E2CD2A482FEB0093902D /* MyRefrigerator.swift in Sources */,
 				8655E24C2A3B29540093902D /* OpenAiKey.swift in Sources */,
 				8655E23F2A39B7F00093902D /* MyInfoViewController.swift in Sources */,
 				8655E23D2A39B7E50093902D /* MainViewController.swift in Sources */,
 				8655E2392A39B0630093902D /* GuideViewController.swift in Sources */,
 				8655E2072A39AB480093902D /* SceneDelegate.swift in Sources */,
-				8655E2522A3D87F20093902D /* myModel.swift in Sources */,
+				8655E2522A3D87F20093902D /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
