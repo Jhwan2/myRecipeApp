@@ -12,4 +12,5 @@ struct Recipe {
     let imageUrl: URL
     let title: String
     let recipeNum: String
+    let nickName: String
 }

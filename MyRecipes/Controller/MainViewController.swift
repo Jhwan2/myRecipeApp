@@ -56,8 +56,12 @@ extension MainViewController {
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CustomCellView
-        cell.mainImageView.sd_setImage(with: myRecipes[indexPath.item].imageUrl)
-        cell.myTitle.text = myRecipes[indexPath.item].title
+        
+        let viewModel = CustomCellViewModel(recipe: myRecipes[indexPath.item])
+        
+        cell.mainImageView.sd_setImage(with: viewModel.imageUrl)
+        cell.myTitle.text = viewModel.title
+        cell.nickName.text = viewModel.nickName
         return cell
     }
     
@@ -70,7 +74,7 @@ extension MainViewController {
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 370)
+        return CGSize(width: 300, height: 400)
     }
 }
 

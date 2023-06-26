@@ -12,7 +12,7 @@ class CustomCellView: UICollectionViewCell {
     
     private let mainView: UIView = {
        let view = UIView()
-        view.frame = .init(x: 0, y: 0, width: 300, height: 370)
+        view.frame = .init(x: 0, y: 0, width: 300, height: 400)
         view.backgroundColor = .white
         view.layer.cornerRadius = 10
         // 그림자 색상 설정. 이 경우 검은색입니다.
@@ -51,6 +51,14 @@ class CustomCellView: UICollectionViewCell {
         return label
     }()
     
+    var nickName: UILabel = {
+        let label = UILabel()
+         label.textColor = .black
+        label.font = .systemFont(ofSize: 15, weight: .medium)
+         label.textAlignment = .left
+         return label
+     }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -66,6 +74,8 @@ class CustomCellView: UICollectionViewCell {
         mainImageView.anchor(top: mainView.topAnchor,left: mainView.leftAnchor,paddingTop: 0,paddingLeft: 0)
         addSubview(myTitle)
         myTitle.anchor(top: mainImageView.bottomAnchor,left: mainView.leftAnchor, right: mainView.rightAnchor,paddingTop: 10, paddingLeft: 10, paddingRight: 10)
+        addSubview(nickName)
+        nickName.anchor(top: myTitle.bottomAnchor, left: mainView.leftAnchor, paddingTop: 10, paddingLeft: 10)
     }
 
 }

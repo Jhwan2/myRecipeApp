@@ -28,6 +28,7 @@ final class SoupManager {
                 let doc = try SwiftSoup.parse(html)
                 let elements: Elements = try doc.select("li.common_sp_list_li")
                 for element in elements.array() {
+                    
                     let titleElement: Element = try element.select("div.common_sp_caption_tit.line2").first()!
                     let title: String = try titleElement.text()
                     
@@ -45,8 +46,11 @@ final class SoupManager {
                     }
                     guard let imageurl = URL(string: imageURL) else {return }
                     
+                    let nicknameEl: Element = try element.select("div.common_sp_caption_rv_name").first()!
+                    let nickName: String = try nicknameEl.text()
+                    
                     if recipes.count < 10 {
-                        recipes.append(Recipe(imageUrl: imageurl, title: title, recipeNum: recipeNum))
+                        recipes.append(Recipe(imageUrl: imageurl, title: title, recipeNum: recipeNum, nickName: nickName))
                     } else {
                         DispatchQueue.main.async {
                             completion(recipes)
