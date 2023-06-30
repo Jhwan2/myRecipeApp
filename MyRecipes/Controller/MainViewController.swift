@@ -65,10 +65,17 @@ extension MainViewController {
         return cell
     }
     
+}
+
+//MARK: Collectionview/ delegate
+extension MainViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("tap!!!!!@@")
+        let vc = RecipeInfoViewController()
+        vc.recipe = myRecipes[indexPath.item]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
+
 
 //MARK: Collectionview/ flowlayout
 
