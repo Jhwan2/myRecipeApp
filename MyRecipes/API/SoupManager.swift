@@ -11,8 +11,9 @@ import SwiftSoup
 final class SoupManager {
     
     static let shared = SoupManager()
-
-    let rankUrl = URL(string: "https://www.10000recipe.com/ranking/home_new.html")!
+    
+    private let rankUrl = URL(string: "https://www.10000recipe.com/ranking/home_new.html")!
+    private let mainUrl = "https://www.10000recipe.com"
     
     
     func fetch(completion: @escaping([Recipe])-> Void) {
@@ -69,6 +70,58 @@ final class SoupManager {
         task.resume()
 
     }
+    
+    func fetchCooking(reciNum: String, completion: @escaping (CookingData?) -> Void) {
+        
+        let url = URL(string: mainUrl + reciNum)!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else {
+                print("Failed to fetch data: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+            
+            let html = String(data: data, encoding: .utf8)!
+            
+            do {
+                let doc: Document = try SwiftSoup.parse(html)
+                
+                // Get ingredients
+                let ingredientElements: Elements = try doc.select("div.cont_ingre2")
+                var ingredients: [String] = []
+                for element in ingredientElements.array() {
+                    let ingredient: String = try element.text()
+                    ingredients.append(ingredient)
+                }
+                
+                // Get steps
+                let stepElements: Elements = try doc.select("div.view_step")
+                var steps: [String] = []
+                for element in stepElements.array() {
+                    let step: String = try element.text()
+                    steps.append(step)
+                }
+                
+                // Get image URL
+                let imageElement: Element = try doc.select("div.centeredcrop img").first()!
+                let imageUrlString: String = try imageElement.attr("src")
+                let imageUrl = URL(string: imageUrlString)
+                
+                let cookingData = CookingData(ingredients: ingredients, steps: steps, imageUrl: imageUrl)
+                completion(cookingData)
+                
+            } catch Exception.Error(let type, let message) {
+                print("\(type): \(message)")
+                completion(nil)
+            } catch {
+                print("error")
+                completion(nil)
+            }
+        }
+        task.resume()
+    }
 
 
 }
+
+
+

@@ -14,3 +14,9 @@ struct Recipe {
     let recipeNum: String
     let nickName: String
 }
+
+struct CookingData {
+    let ingredients: [String]
+    let steps: [String]
+    let imageUrl: URL?
+}

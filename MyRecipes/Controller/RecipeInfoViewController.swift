@@ -12,7 +12,6 @@ final class RecipeInfoViewController: UIViewController {
     var recipe: Recipe? = nil {
         didSet {
             configureUI()
-            
         }
     }
     
@@ -25,15 +24,20 @@ final class RecipeInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        guard let recipe = recipe else { return }
+        SoupManager.shared.fetchCooking(reciNum: recipe.recipeNum) { data in
+            print("\(data)")
+        }
     }
     
     private func configureUI() {
         view.backgroundColor = .white
         view.addSubview(imageView)
-        imageView.sd_setImage(with: recipe?.imageUrl)
+        guard let recipe = recipe else { return }
+        imageView.sd_setImage(with: recipe.imageUrl)
         imageView.center(inView: view)
         view.addSubview(titleLabel)
-        titleLabel.text = recipe?.title
+        titleLabel.text = recipe.title
         titleLabel.centerX(inView: view)
         titleLabel.anchor(top: imageView.bottomAnchor, paddingTop: 10)
         view.addSubview(tableView)

@@ -33,7 +33,7 @@ final class MainViewController: UICollectionViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+//        layout.scrollDirection = .horizontal
         self.collectionView.collectionViewLayout = layout
     }
     
