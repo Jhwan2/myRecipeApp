@@ -13,10 +13,15 @@ struct Recipe {
     let title: String
     let recipeNum: String
     let nickName: String
+    var cooking: CookingData?
 }
 
 struct CookingData {
     let ingredients: [String]
-    let steps: [String]
-    let imageUrl: URL?
+    let steps: [Step]
+}
+
+struct Step {
+    var instruction: String
+    var imageUrl: URL
 }

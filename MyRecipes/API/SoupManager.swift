@@ -85,28 +85,30 @@ final class SoupManager {
             do {
                 let doc: Document = try SwiftSoup.parse(html)
                 
-                // Get ingredients
-                let ingredientElements: Elements = try doc.select("div.cont_ingre2")
+                // Fetching ingredients
+                let ingredientElements: Elements = try doc.select("div.ready_ingre3 ul:nth-child(2) li")
                 var ingredients: [String] = []
                 for element in ingredientElements.array() {
                     let ingredient: String = try element.text()
                     ingredients.append(ingredient)
                 }
                 
-                // Get steps
-                let stepElements: Elements = try doc.select("div.view_step")
-                var steps: [String] = []
+                // Fetching cooking steps
+                let stepElements: Elements = try doc.select("div.view_step_cont")
+                var steps: [Step] = []
                 for element in stepElements.array() {
                     let step: String = try element.text()
-                    steps.append(step)
+                    // Step image
+                    if let imageElement = try? element.select("img").first() {
+                        let imageURL: String = try imageElement.attr("src")
+                        guard let stepImageURL = URL(string: imageURL) else {continue}
+                        steps.append(Step(instruction: step, imageUrl: stepImageURL))
+                    } else {
+                        print("Could not find image element")
+                    }
                 }
                 
-                // Get image URL
-                let imageElement: Element = try doc.select("div.centeredcrop img").first()!
-                let imageUrlString: String = try imageElement.attr("src")
-                let imageUrl = URL(string: imageUrlString)
-                
-                let cookingData = CookingData(ingredients: ingredients, steps: steps, imageUrl: imageUrl)
+                let cookingData = CookingData(ingredients: ingredients, steps: steps)
                 completion(cookingData)
                 
             } catch Exception.Error(let type, let message) {

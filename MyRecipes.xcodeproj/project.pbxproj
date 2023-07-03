@@ -16,7 +16,7 @@
 		8655E21C2A39AB490093902D /* MyRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E21B2A39AB490093902D /* MyRecipesTests.swift */; };
 		8655E2262A39AB490093902D /* MyRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2252A39AB490093902D /* MyRecipesUITests.swift */; };
 		8655E2282A39AB490093902D /* MyRecipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2272A39AB490093902D /* MyRecipesUITestsLaunchTests.swift */; };
-		8655E2352A39AB730093902D /* Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2342A39AB730093902D /* Extenstion.swift */; };
+		8655E2352A39AB730093902D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2342A39AB730093902D /* UIView.swift */; };
 		8655E2392A39B0630093902D /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2382A39B0630093902D /* GuideViewController.swift */; };
 		8655E23D2A39B7E50093902D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E23C2A39B7E50093902D /* MainViewController.swift */; };
 		8655E23F2A39B7F00093902D /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E23E2A39B7F00093902D /* MyInfoViewController.swift */; };
@@ -31,6 +31,7 @@
 		8655E2CD2A482FEB0093902D /* MyRefrigerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2CC2A482FEB0093902D /* MyRefrigerator.swift */; };
 		8655E2D02A4952E50093902D /* CustomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2CF2A4952E50093902D /* CustomCellViewModel.swift */; };
 		8655E2D22A49A7090093902D /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2D12A49A7090093902D /* RecipeInfoViewController.swift */; };
+		8655E2D42A52E84C0093902D /* CookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2D32A52E84C0093902D /* CookingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,7 @@
 		8655E2212A39AB490093902D /* MyRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8655E2252A39AB490093902D /* MyRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipesUITests.swift; sourceTree = "<group>"; };
 		8655E2272A39AB490093902D /* MyRecipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8655E2342A39AB730093902D /* Extenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstion.swift; sourceTree = "<group>"; };
+		8655E2342A39AB730093902D /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8655E2382A39B0630093902D /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		8655E23C2A39B7E50093902D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8655E23E2A39B7F00093902D /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		8655E2CC2A482FEB0093902D /* MyRefrigerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRefrigerator.swift; sourceTree = "<group>"; };
 		8655E2CF2A4952E50093902D /* CustomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellViewModel.swift; sourceTree = "<group>"; };
 		8655E2D12A49A7090093902D /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
+		8655E2D32A52E84C0093902D /* CookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +179,7 @@
 		8655E2372A39B00E0093902D /* Extenstion */ = {
 			isa = PBXGroup;
 			children = (
-				8655E2342A39AB730093902D /* Extenstion.swift */,
+				8655E2342A39AB730093902D /* UIView.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				8655E24E2A3D84D60093902D /* CustomCellView.swift */,
+				8655E2D32A52E84C0093902D /* CookingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,11 +362,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8655E2422A39C1D50093902D /* SoupManager.swift in Sources */,
-				8655E2352A39AB730093902D /* Extenstion.swift in Sources */,
+				8655E2352A39AB730093902D /* UIView.swift in Sources */,
 				8655E2D22A49A7090093902D /* RecipeInfoViewController.swift in Sources */,
 				8655E2092A39AB480093902D /* MainTabController.swift in Sources */,
 				8655E2D02A4952E50093902D /* CustomCellViewModel.swift in Sources */,
 				8655E2052A39AB480093902D /* AppDelegate.swift in Sources */,
+				8655E2D42A52E84C0093902D /* CookingCell.swift in Sources */,
 				8655E24A2A3B12590093902D /* OpenAIManager.swift in Sources */,
 				8655E24F2A3D84D60093902D /* CustomCellView.swift in Sources */,
 				8655E2CD2A482FEB0093902D /* MyRefrigerator.swift in Sources */,

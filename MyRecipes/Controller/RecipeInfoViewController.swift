@@ -7,15 +7,20 @@
 
 import UIKit
 
+private let reuseIdentifier = "RecipeInfoCell"
+
 final class RecipeInfoViewController: UIViewController {
     
     var recipe: Recipe? = nil {
         didSet {
-            configureUI()
+            DispatchQueue.main.async {
+                self.configureUI()
+                self.tableView.reloadData()
+            }
         }
     }
     
-    let imageView: UIImageView = UIImageView()
+    var imageView: UIImageView = UIImageView()
     
     let titleLabel: UILabel = UILabel()
     
@@ -26,7 +31,8 @@ final class RecipeInfoViewController: UIViewController {
         configureUI()
         guard let recipe = recipe else { return }
         SoupManager.shared.fetchCooking(reciNum: recipe.recipeNum) { data in
-            print("\(data)")
+            self.recipe?.cooking = data
+//            print("\(data?.steps.count)")
         }
     }
     
@@ -35,15 +41,46 @@ final class RecipeInfoViewController: UIViewController {
         view.addSubview(imageView)
         guard let recipe = recipe else { return }
         imageView.sd_setImage(with: recipe.imageUrl)
-        imageView.center(inView: view)
+        imageView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor)
         view.addSubview(titleLabel)
         titleLabel.text = recipe.title
         titleLabel.centerX(inView: view)
         titleLabel.anchor(top: imageView.bottomAnchor, paddingTop: 10)
         view.addSubview(tableView)
-        tableView.backgroundColor = .blue
+        tableView.backgroundColor = .white
         tableView.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CookingCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.rowHeight = 500
         
     }
     
 }
+
+//MARK: UITableView/DataSource
+extension RecipeInfoViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let num = recipe?.cooking?.steps.count else { return 0 }
+        return num
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CookingCell
+        
+        guard let arr = recipe?.cooking?.steps[indexPath.row] else { print("error @@@@")
+            return cell }
+        cell.mainImageView.sd_setImage(with: arr.imageUrl)
+        cell.myTitle.text = arr.instruction
+//        cell.largeContentTitle = arr.instruction
+//        print("\(arr.steps[indexPath.row].instruction)")
+        return cell
+    }
+    
+}
+
+//MARK: UITableView/Delegate
+extension RecipeInfoViewController: UITableViewDelegate {
+    
+}
+
