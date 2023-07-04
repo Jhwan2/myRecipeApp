@@ -30,18 +30,20 @@ class CookingCell: UITableViewCell {
     
     let mainImageView: UIImageView = {
        let imageview = UIImageView()
-        imageview.contentMode = .scaleToFill
+        imageview.contentMode = .scaleAspectFill
         imageview.frame = .init()
         imageview.layer.cornerRadius = 10
         imageview.clipsToBounds = true
+        imageview.anchor(width: 150, height: 150)
         return imageview
     }()
     
     var myTitle: UILabel = {
        let label = UILabel()
         label.textColor = .black
-        label.font = .systemFont(ofSize: 20, weight: .bold)
-        label.numberOfLines = 2
+//        label.font = .systemFont(ofSize: 10)
+        label.anchor(width: 200)
+        label.numberOfLines = 30
         label.textAlignment = .left
         return label
     }()
@@ -64,10 +66,13 @@ class CookingCell: UITableViewCell {
     
     func configureUI() {
         addSubview(mainView)
+        mainView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
         addSubview(mainImageView)
+        mainImageView.centerY(inView: mainView)
         mainImageView.anchor(top: mainView.topAnchor,left: mainView.leftAnchor,paddingTop: 0,paddingLeft: 0)
         addSubview(myTitle)
-        myTitle.anchor(top: mainImageView.bottomAnchor,left: mainView.leftAnchor, right: mainView.rightAnchor,paddingTop: 10, paddingLeft: 10, paddingRight: 10)
+        myTitle.centerY(inView: mainView)
+        myTitle.anchor(left: mainImageView.rightAnchor, paddingLeft: 20)
     }
 
 }

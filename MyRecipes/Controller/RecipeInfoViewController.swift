@@ -52,7 +52,7 @@ final class RecipeInfoViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CookingCell.self, forCellReuseIdentifier: reuseIdentifier)
-        tableView.rowHeight = 500
+        tableView.rowHeight = 250
         
     }
     
