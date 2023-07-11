@@ -10,6 +10,12 @@ import UIKit
 
 class CustomCellView: UICollectionViewCell {
     
+    var recipe: Recipe? {
+        didSet {
+            configureRecipe()
+        }
+    }
+    
     private let mainView: UIView = {
        let view = UIView()
         view.frame = .init(x: 0, y: 0, width: 300, height: 400)
@@ -68,6 +74,7 @@ class CustomCellView: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func configureUI() {
         addSubview(mainView)
         addSubview(mainImageView)
@@ -76,6 +83,10 @@ class CustomCellView: UICollectionViewCell {
         myTitle.anchor(top: mainImageView.bottomAnchor,left: mainView.leftAnchor, right: mainView.rightAnchor,paddingTop: 10, paddingLeft: 10, paddingRight: 10)
         addSubview(nickName)
         nickName.anchor(top: myTitle.bottomAnchor, left: mainView.leftAnchor, paddingTop: 10, paddingLeft: 10)
+    }
+    
+    func configureRecipe() {
+        
     }
 
 }

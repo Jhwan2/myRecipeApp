@@ -57,11 +57,7 @@ extension MainViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CustomCellView
         
-        let viewModel = CustomCellViewModel(recipe: myRecipes[indexPath.item])
-        
-        cell.mainImageView.sd_setImage(with: viewModel.imageUrl)
-        cell.myTitle.text = viewModel.title
-        cell.nickName.text = viewModel.nickName
+        cell.recipe = myRecipes[indexPath.item]
         return cell
     }
     

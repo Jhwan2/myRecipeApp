@@ -32,6 +32,7 @@
 		8655E2D02A4952E50093902D /* CustomCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2CF2A4952E50093902D /* CustomCellViewModel.swift */; };
 		8655E2D22A49A7090093902D /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2D12A49A7090093902D /* RecipeInfoViewController.swift */; };
 		8655E2D42A52E84C0093902D /* CookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2D32A52E84C0093902D /* CookingCell.swift */; };
+		8655E2D62A5D33230093902D /* CookingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2D52A5D33230093902D /* CookingCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		8655E2CF2A4952E50093902D /* CustomCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellViewModel.swift; sourceTree = "<group>"; };
 		8655E2D12A49A7090093902D /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
 		8655E2D32A52E84C0093902D /* CookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingCell.swift; sourceTree = "<group>"; };
+		8655E2D52A5D33230093902D /* CookingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				8655E2CF2A4952E50093902D /* CustomCellViewModel.swift */,
+				8655E2D52A5D33230093902D /* CookingCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				8655E2D22A49A7090093902D /* RecipeInfoViewController.swift in Sources */,
 				8655E2092A39AB480093902D /* MainTabController.swift in Sources */,
 				8655E2D02A4952E50093902D /* CustomCellViewModel.swift in Sources */,
+				8655E2D62A5D33230093902D /* CookingCellViewModel.swift in Sources */,
 				8655E2052A39AB480093902D /* AppDelegate.swift in Sources */,
 				8655E2D42A52E84C0093902D /* CookingCell.swift in Sources */,
 				8655E24A2A3B12590093902D /* OpenAIManager.swift in Sources */,

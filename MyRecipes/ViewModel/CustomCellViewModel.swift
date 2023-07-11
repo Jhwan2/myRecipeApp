@@ -9,7 +9,7 @@ import UIKit
 
 struct CustomCellViewModel {
     
-    let recipe: Recipe
+    private let recipe: Recipe
     
     var imageUrl: URL {
         return recipe.imageUrl

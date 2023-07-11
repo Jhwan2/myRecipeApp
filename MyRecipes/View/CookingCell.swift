@@ -8,6 +8,13 @@
 import UIKit
 
 class CookingCell: UITableViewCell {
+    
+    var step: Step? {
+        didSet {
+            configureStep()
+        }
+    }
+    
     private let mainView: UIView = {
        let view = UIView()
         view.backgroundColor = .white
@@ -30,7 +37,7 @@ class CookingCell: UITableViewCell {
     
     let mainImageView: UIImageView = {
        let imageview = UIImageView()
-        imageview.contentMode = .scaleAspectFill
+        imageview.contentMode = .scaleAspectFit
         imageview.frame = .init()
         imageview.layer.cornerRadius = 10
         imageview.clipsToBounds = true
@@ -60,7 +67,6 @@ class CookingCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
@@ -73,6 +79,14 @@ class CookingCell: UITableViewCell {
         addSubview(myTitle)
         myTitle.centerY(inView: mainView)
         myTitle.anchor(left: mainImageView.rightAnchor, paddingLeft: 20)
+    }
+    
+    func configureStep() {
+        guard let step = step else { return }
+        let viewModel = CookingCellViewModel(step: step)
+        
+        mainImageView.sd_setImage(with: viewModel.imageUrl)
+        myTitle.text = viewModel.instruction
     }
 
 }
