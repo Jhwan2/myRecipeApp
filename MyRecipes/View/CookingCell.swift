@@ -7,15 +7,16 @@
 
 import UIKit
 
-class CookingCell: UITableViewCell {
+final class CookingCell: UITableViewCell {
     
     var step: Step? {
         didSet {
+//            configureUI()
             configureStep()
         }
     }
     
-    private let mainView: UIView = {
+    private lazy var mainView: UIView = {
        let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 10
@@ -35,7 +36,7 @@ class CookingCell: UITableViewCell {
         return view
     }()
     
-    let mainImageView: UIImageView = {
+    private lazy var mainImageView: UIImageView = {
        let imageview = UIImageView()
         imageview.contentMode = .scaleAspectFit
         imageview.frame = .init()
@@ -45,7 +46,7 @@ class CookingCell: UITableViewCell {
         return imageview
     }()
     
-    var myTitle: UILabel = {
+    private lazy var myTitle: UILabel = {
        let label = UILabel()
         label.textColor = .black
 //        label.font = .systemFont(ofSize: 10)
@@ -55,7 +56,6 @@ class CookingCell: UITableViewCell {
         return label
     }()
     
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureUI()
@@ -63,11 +63,6 @@ class CookingCell: UITableViewCell {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
     
     func configureUI() {

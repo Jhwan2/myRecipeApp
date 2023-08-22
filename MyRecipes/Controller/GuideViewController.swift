@@ -19,7 +19,6 @@ final class GuideViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         button.setTitle("Next", for: .normal)
-        button.addTarget(self, action: #selector(handleNextBtnTapped), for: .touchUpInside)
         button.semanticContentAttribute = .forceRightToLeft
         return button
     }()
@@ -35,6 +34,7 @@ final class GuideViewController: UIViewController {
         view.addSubview(introLabel)
         introLabel.center(inView: view)
         view.addSubview(nextButton)
+        nextButton.addTarget(self, action: #selector(handleNextBtnTapped), for: .touchUpInside)
         nextButton.anchor(top: introLabel.topAnchor, paddingTop: 50)
         nextButton.centerX(inView: view)
     }

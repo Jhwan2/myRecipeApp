@@ -20,8 +20,8 @@ final class MainTapController: UITabBarController {
         super.viewDidLoad()
         userAndConfigureUI()
         configureTabUI()
-//        OpenAIManager.shared.fetchOpenAiChat(ques: "나는 누구야?") { result in
-//            print("\(result.choices.first?.message.content)")
+//        OpenAIManager.shared.fetchOpenAiChat(ques: "제육볶음 레시피 알려줘") { result in
+//            print("DEBUG : \(result)")
 //        }
     }
     
@@ -34,6 +34,7 @@ final class MainTapController: UITabBarController {
     }
     
     private func configureTabUI() {
+        
         let main = MainViewController(collectionViewLayout: UICollectionViewLayout())
         let nav1 = templateNavigationController(image: UIImage(systemName: "puzzlepiece.extension"), rootViewController: main)
         

@@ -18,12 +18,29 @@ final class MainViewController: UICollectionViewController {
             }
         }
     }
+    
+    private let searchBar = UISearchBar()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionConfigure()
         fetchURL()
+        searchBarConfigure()
         navigationItem.title = "Recipe Rank 10"
+    }
+    
+    private func searchBarConfigure() {
+        searchBar.placeholder = "Search"
+        searchBar.delegate = self
+        
+//         UISearchBar를 뷰에 추가
+        view.addSubview(searchBar)
+        
+//         Auto Layout 설정 (Optional)
+        searchBar.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor,  height: 50)
+        
+        collectionView.anchor(top: searchBar.bottomAnchor ,left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+        
     }
     
     private func collectionConfigure() {
@@ -49,7 +66,6 @@ final class MainViewController: UICollectionViewController {
 }
 
 //MARK: Collectionview/ dataSource
-
 extension MainViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return myRecipes.count
@@ -74,10 +90,21 @@ extension MainViewController {
 
 
 //MARK: Collectionview/ flowlayout
-
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 300, height: 400)
     }
 }
 
+// MARK: SearchBar / Delegate
+extension MainViewController: UISearchBarDelegate {
+    // UISearchBarDelegate 메서드 구현
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let searchText = searchBar.text {
+            // 검색어 사용하여 검색 로직 구현
+            print("Search text: \(searchText)")
+            
+        }
+        searchBar.resignFirstResponder()
+    }
+}

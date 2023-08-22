@@ -37,7 +37,7 @@ class CustomCellView: UICollectionViewCell {
         return view
     }()
     
-    let mainImageView: UIImageView = {
+    private lazy var mainImageView: UIImageView = {
        let imageview = UIImageView()
 //        imageview.image = UIImage(systemName: "plus")
         imageview.contentMode = .scaleToFill
@@ -48,7 +48,7 @@ class CustomCellView: UICollectionViewCell {
         return imageview
     }()
     
-    var myTitle: UILabel = {
+    private lazy var myTitle: UILabel = {
        let label = UILabel()
         label.textColor = .black
         label.font = .systemFont(ofSize: 20, weight: .bold)
@@ -57,7 +57,7 @@ class CustomCellView: UICollectionViewCell {
         return label
     }()
     
-    var nickName: UILabel = {
+    private lazy var nickName: UILabel = {
         let label = UILabel()
          label.textColor = .black
         label.font = .systemFont(ofSize: 15, weight: .medium)
@@ -85,7 +85,11 @@ class CustomCellView: UICollectionViewCell {
         nickName.anchor(top: myTitle.bottomAnchor, left: mainView.leftAnchor, paddingTop: 10, paddingLeft: 10)
     }
     
-    func configureRecipe() {
+    private func configureRecipe() {
+        guard let recipe = recipe else { return }
+        mainImageView.sd_setImage(with: recipe.imageUrl)
+        myTitle.text = recipe.title
+        nickName.text = recipe.nickName
         
     }
 

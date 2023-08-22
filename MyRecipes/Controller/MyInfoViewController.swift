@@ -10,6 +10,8 @@ import UIKit
 final class MyInfoViewController: UIViewController {
     
     private let tableView = UITableView()
+    
+    var wofy = ["간장", "김치", "밀가루"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
