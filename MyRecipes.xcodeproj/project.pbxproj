@@ -33,6 +33,26 @@
 		8655E2D22A49A7090093902D /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2D12A49A7090093902D /* RecipeInfoViewController.swift */; };
 		8655E2D42A52E84C0093902D /* CookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2D32A52E84C0093902D /* CookingCell.swift */; };
 		8655E2D62A5D33230093902D /* CookingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655E2D52A5D33230093902D /* CookingCellViewModel.swift */; };
+		866A4DA82A9A4E6A00B0AEE1 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866A4DA72A9A4E6A00B0AEE1 /* Test.swift */; };
+		867FAF9D2AA07BE400C2E467 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867FAF9C2AA07BE400C2E467 /* UIColor.swift */; };
+		867FAFA42AA07F4900C2E467 /* MaruBuri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAF9F2AA07F4900C2E467 /* MaruBuri-SemiBold.ttf */; };
+		867FAFA52AA07F4900C2E467 /* MaruBuri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAF9F2AA07F4900C2E467 /* MaruBuri-SemiBold.ttf */; };
+		867FAFA62AA07F4900C2E467 /* MaruBuri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAF9F2AA07F4900C2E467 /* MaruBuri-SemiBold.ttf */; };
+		867FAFA72AA07F4900C2E467 /* MaruBuri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA02AA07F4900C2E467 /* MaruBuri-Regular.ttf */; };
+		867FAFA82AA07F4900C2E467 /* MaruBuri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA02AA07F4900C2E467 /* MaruBuri-Regular.ttf */; };
+		867FAFA92AA07F4900C2E467 /* MaruBuri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA02AA07F4900C2E467 /* MaruBuri-Regular.ttf */; };
+		867FAFAA2AA07F4900C2E467 /* MaruBuri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA12AA07F4900C2E467 /* MaruBuri-Light.ttf */; };
+		867FAFAB2AA07F4900C2E467 /* MaruBuri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA12AA07F4900C2E467 /* MaruBuri-Light.ttf */; };
+		867FAFAC2AA07F4900C2E467 /* MaruBuri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA12AA07F4900C2E467 /* MaruBuri-Light.ttf */; };
+		867FAFAD2AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA22AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf */; };
+		867FAFAE2AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA22AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf */; };
+		867FAFAF2AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA22AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf */; };
+		867FAFB02AA07F4900C2E467 /* MaruBuri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA32AA07F4900C2E467 /* MaruBuri-Bold.ttf */; };
+		867FAFB12AA07F4900C2E467 /* MaruBuri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA32AA07F4900C2E467 /* MaruBuri-Bold.ttf */; };
+		867FAFB22AA07F4900C2E467 /* MaruBuri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 867FAFA32AA07F4900C2E467 /* MaruBuri-Bold.ttf */; };
+		867FAFB42AA0804600C2E467 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867FAFB32AA0804600C2E467 /* UIFont.swift */; };
+		867FAFB52AA0804600C2E467 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867FAFB32AA0804600C2E467 /* UIFont.swift */; };
+		867FAFB62AA0804600C2E467 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867FAFB32AA0804600C2E467 /* UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +100,14 @@
 		8655E2D12A49A7090093902D /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
 		8655E2D32A52E84C0093902D /* CookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingCell.swift; sourceTree = "<group>"; };
 		8655E2D52A5D33230093902D /* CookingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingCellViewModel.swift; sourceTree = "<group>"; };
+		866A4DA72A9A4E6A00B0AEE1 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		867FAF9C2AA07BE400C2E467 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		867FAF9F2AA07F4900C2E467 /* MaruBuri-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-SemiBold.ttf"; sourceTree = "<group>"; };
+		867FAFA02AA07F4900C2E467 /* MaruBuri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Regular.ttf"; sourceTree = "<group>"; };
+		867FAFA12AA07F4900C2E467 /* MaruBuri-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Light.ttf"; sourceTree = "<group>"; };
+		867FAFA22AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-ExtraLight.ttf"; sourceTree = "<group>"; };
+		867FAFA32AA07F4900C2E467 /* MaruBuri-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Bold.ttf"; sourceTree = "<group>"; };
+		867FAFB32AA0804600C2E467 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +161,7 @@
 		8655E2032A39AB480093902D /* MyRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				867FAF9E2AA07F3600C2E467 /* Font */,
 				8655E2042A39AB480093902D /* AppDelegate.swift */,
 				8655E2062A39AB480093902D /* SceneDelegate.swift */,
 				8655E2402A39C1BF0093902D /* API */,
@@ -182,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				8655E2342A39AB730093902D /* UIView.swift */,
+				867FAF9C2AA07BE400C2E467 /* UIColor.swift */,
+				867FAFB32AA0804600C2E467 /* UIFont.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -210,6 +241,7 @@
 			children = (
 				8655E2512A3D87F20093902D /* Recipe.swift */,
 				8655E2CC2A482FEB0093902D /* MyRefrigerator.swift */,
+				866A4DA72A9A4E6A00B0AEE1 /* Test.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +253,18 @@
 				8655E2D52A5D33230093902D /* CookingCellViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		867FAF9E2AA07F3600C2E467 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				867FAFA32AA07F4900C2E467 /* MaruBuri-Bold.ttf */,
+				867FAFA22AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf */,
+				867FAFA12AA07F4900C2E467 /* MaruBuri-Light.ttf */,
+				867FAFA02AA07F4900C2E467 /* MaruBuri-Regular.ttf */,
+				867FAF9F2AA07F4900C2E467 /* MaruBuri-SemiBold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,9 +381,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867FAFAA2AA07F4900C2E467 /* MaruBuri-Light.ttf in Resources */,
+				867FAFA42AA07F4900C2E467 /* MaruBuri-SemiBold.ttf in Resources */,
+				867FAFB02AA07F4900C2E467 /* MaruBuri-Bold.ttf in Resources */,
 				8655E2112A39AB490093902D /* LaunchScreen.storyboard in Resources */,
 				8655E20E2A39AB490093902D /* Assets.xcassets in Resources */,
 				8655E20C2A39AB480093902D /* Main.storyboard in Resources */,
+				867FAFAD2AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf in Resources */,
+				867FAFA72AA07F4900C2E467 /* MaruBuri-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +396,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867FAFAB2AA07F4900C2E467 /* MaruBuri-Light.ttf in Resources */,
+				867FAFA82AA07F4900C2E467 /* MaruBuri-Regular.ttf in Resources */,
+				867FAFA52AA07F4900C2E467 /* MaruBuri-SemiBold.ttf in Resources */,
+				867FAFB12AA07F4900C2E467 /* MaruBuri-Bold.ttf in Resources */,
+				867FAFAE2AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +408,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867FAFAC2AA07F4900C2E467 /* MaruBuri-Light.ttf in Resources */,
+				867FAFA92AA07F4900C2E467 /* MaruBuri-Regular.ttf in Resources */,
+				867FAFA62AA07F4900C2E467 /* MaruBuri-SemiBold.ttf in Resources */,
+				867FAFB22AA07F4900C2E467 /* MaruBuri-Bold.ttf in Resources */,
+				867FAFAF2AA07F4900C2E467 /* MaruBuri-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,9 +431,12 @@
 				8655E2D62A5D33230093902D /* CookingCellViewModel.swift in Sources */,
 				8655E2052A39AB480093902D /* AppDelegate.swift in Sources */,
 				8655E2D42A52E84C0093902D /* CookingCell.swift in Sources */,
+				867FAFB42AA0804600C2E467 /* UIFont.swift in Sources */,
 				8655E24A2A3B12590093902D /* OpenAIManager.swift in Sources */,
 				8655E24F2A3D84D60093902D /* CustomCellView.swift in Sources */,
 				8655E2CD2A482FEB0093902D /* MyRefrigerator.swift in Sources */,
+				867FAF9D2AA07BE400C2E467 /* UIColor.swift in Sources */,
+				866A4DA82A9A4E6A00B0AEE1 /* Test.swift in Sources */,
 				8655E24C2A3B29540093902D /* OpenAiKey.swift in Sources */,
 				8655E23F2A39B7F00093902D /* MyInfoViewController.swift in Sources */,
 				8655E23D2A39B7E50093902D /* MainViewController.swift in Sources */,
@@ -388,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867FAFB52AA0804600C2E467 /* UIFont.swift in Sources */,
 				8655E21C2A39AB490093902D /* MyRecipesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +461,7 @@
 			files = (
 				8655E2282A39AB490093902D /* MyRecipesUITestsLaunchTests.swift in Sources */,
 				8655E2262A39AB490093902D /* MyRecipesUITests.swift in Sources */,
+				867FAFB62AA0804600C2E467 /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

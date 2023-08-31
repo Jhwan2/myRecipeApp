@@ -23,6 +23,7 @@ final class MainTapController: UITabBarController {
 //        OpenAIManager.shared.fetchOpenAiChat(ques: "제육볶음 레시피 알려줘") { result in
 //            print("DEBUG : \(result)")
 //        }
+//        SoupManager.shared.crawlDisasterMessages()
     }
     
     private func userAndConfigureUI() {

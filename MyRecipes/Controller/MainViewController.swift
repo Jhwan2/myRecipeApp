@@ -99,7 +99,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 // MARK: SearchBar / Delegate
 extension MainViewController: UISearchBarDelegate {
     // UISearchBarDelegate 메서드 구현
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) async {
         if let searchText = searchBar.text {
             // 검색어 사용하여 검색 로직 구현
             print("Search text: \(searchText)")

@@ -92,7 +92,6 @@ final class SoupManager {
                     let ingredient: String = try element.text()
                     ingredients.append(ingredient)
                 }
-                
                 // Fetching cooking steps
                 let stepElements: Elements = try doc.select("div.view_step_cont")
                 var steps: [Step] = []
@@ -121,7 +120,6 @@ final class SoupManager {
         }
         task.resume()
     }
-
 
 }
 

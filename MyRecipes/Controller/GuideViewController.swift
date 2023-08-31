@@ -11,7 +11,9 @@ final class GuideViewController: UIViewController {
     
     private let introLabel: UILabel = {
         let label = UILabel()
+        label.font = .MaruBuri(type: .Bold, size: 20)
         label.text = "나의 레시피앱에 오신걸 환영합니다 !"
+        label.textColor = .appColor(.primaryOrenge)
         return label
     }()
     
@@ -19,6 +21,7 @@ final class GuideViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         button.setTitle("Next", for: .normal)
+//        button.setTitleColor(.appColor(.primaryOrenge), for: .normal)
         button.semanticContentAttribute = .forceRightToLeft
         return button
     }()
